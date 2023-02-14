@@ -1,11 +1,18 @@
 version: 0.2
 
+env:
+  variables:
+    PROJECT:"DEV"
+    COST_CENTER: "R423"
 phases: 
     install:
         runtime-versions:
             python: 3.9
         commands:
+            - printenv
             - echo "installing something"
+        finally:
+            - echo "Install is completed"
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
@@ -14,7 +21,8 @@ phases:
             - echo "we are in the build block"
             - echo "we will run some tests"
             - grep -Fq "Congratulations" index.html
+        finally:
+            - echo "Build is completed!!!"
     post_build:
         commands:
             - echo "we are in the post build phase"
-            
