@@ -4,7 +4,7 @@ env:
   variables:
     AWS_REGION: "us-east-1"
     AWS_ACCOUNT_ID: "123456789012"
-    IMAGE_REPO_NAME: "my-app"
+    IMAGE_REPO_NAME: "my-app-repo"
     IMAGE_TAG: "v1"
 
 phases:
