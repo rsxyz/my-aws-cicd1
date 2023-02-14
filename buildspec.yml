@@ -1,9 +1,13 @@
 version: 0.2
-
 env:
   variables:
-    PROJECT:"DEV"
+    S3_BUCKET: "my-website-bucket"
+    PROJECT: "DEV"
     COST_CENTER: "R423"
+    parameter-store:
+      OS_USER: "my_s3_bucket"
+    secrets-manager:
+      OS_PASSWORD: "dev/os_password:os_password"
 phases: 
     install:
         runtime-versions:
